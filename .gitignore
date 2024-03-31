@@ -1,0 +1,4 @@
+# Environments
+my_env/
+*.pyc
+app/migrations/
