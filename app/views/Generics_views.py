@@ -12,8 +12,12 @@ class ListTodo(generics.ListAPIView):   # List todo record
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     pagination_class = MyPagination
-    filter_backends = [SearchFilter]
+    
+    filter_backends = [SearchFilter] #search filter
     search_fields = ['title']
+
+    # filter_backends = [OrderingFilter] # Order filter
+    # ordering_fields = ['id']
 
 class CreateTodo(generics.CreateAPIView): # Create todo record
     queryset = Todo.objects.all()
