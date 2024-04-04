@@ -5,6 +5,8 @@ from .form import *
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 # Create your views here.
 
+def home(request):
+    return render(request, "index.html")
 
 def index(request):
     data = Todo.objects.all()

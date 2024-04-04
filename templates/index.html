@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TodoApp</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="https://cdn.pixabay.com/photo/2017/05/15/23/48/survey-2316468_1280.png" rel="icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/aos/aos.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/glightbox/css/glightbox.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/swiper/swiper-bundle.min.css'%}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css'%}">
+
+  <style>
+    .gradient-custom {
+      background-image: url("assets/img/hero_background.jpg");
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Welcome to TodoApp</h1>
+      <h2>Manage your tasks effectively with TodoApp!</h2>
+      <img src="{% static "img/hero-img.png" %}" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+      <div class="get-started">
+        <a href="#SigninModal" class="btn-get-started scrollto" data-toggle="modal">Login</a>
+        <a href="#SignupModal" class="btn-get-started scrollto" data-toggle="modal">Signup</a>
+    </div>
+  </section><!-- End Hero Section -->
+  
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%}"></script>
+  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js'%}"></script>
+
+  {% include "signin.html" %}
+  {% include "signup.html" %}
+
+  
+
+</body>
+
+</html>

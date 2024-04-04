@@ -57,17 +57,18 @@
                             
                             {% if todo.priority == "Low" %}
                             <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-success rounded-pill text-white">Low priority</span></h6>
+                                <h6 class="mb-0"><span class="btn btn-success btn-sm text-white">Low priority</span></h6>
                             </td>
                             {% elif todo.priority == "Middle" %}
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-warning rounded-pill">Middle priority</span></h6>
-                            </td>
+                                <td class="align-middle">
+                                    <h6 class="mb-0"><span class="btn btn-warning btn-sm text-dark">Middle priority</span></h6>
+                                </td>
                             {% elif todo.priority == "High" %}
-                            <td class="align-middle">
-                                <h6 class="mb-0"><span class="badge bg-danger rounded-pill text-white">High priority</span></h6>
-                            </td>
+                                <td class="align-middle">
+                                    <h6 class="mb-0"><span class="btn btn-danger btn-sm text-white">High priority</span></h6>
+                                </td>
                             {% endif %}
+
 
                             
                             <td>{{todo.created_at}}</td>
@@ -125,7 +126,7 @@
                 <div class="modal-content">
                     <form action="{% url 'add_todo' %}" method="post">
                         {% csrf_token %}
-                        <div class="modal-header">
+                        <div class="modal-header bg-success">
                             <h4 class="modal-title">Add Todo</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
@@ -225,7 +226,7 @@
                 <div class="modal-content">
                     <form action="{% url 'delete_todo' todo.id %}" method="post">
                         {% csrf_token %}
-                        <div class="modal-header">
+                        <div class="modal-header bg-danger">
                             <h4 class="modal-title">Delete Todo</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
