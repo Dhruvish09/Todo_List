@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Todo(models.Model):
@@ -13,6 +14,7 @@ class Todo(models.Model):
         (HIGH, 'High'),
     ]
     
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='+', default='', null=True, blank=True)
     title = models.CharField(max_length=100)
     description = models.TextField()
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default=LOW)

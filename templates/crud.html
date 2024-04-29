@@ -32,8 +32,8 @@
                             <h2>Manage <b>Todos</b></h2>
                         </div>
                         <div class="col-sm-6">
-                            <a href="#AddTodoModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Todo</span></a>
-                            {% comment %} <a href="#DeleteTodoModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a> {% endcomment %}
+                            <a href="/logout" class="btn btn-danger" data-toggle="modal"><i class="fa fa-sign-out" aria-hidden="true"></i> <span>Logout</span></a>
+                            <a href="#AddTodoModal" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus"></i> <span>Add New Todo</span></a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                 <div class="modal-content">
                     <form action="{% url 'update_todo' todo.id %}" method="post">
                         {% csrf_token %}
-                        <div class="modal-header bg-primary text-white">
+                        <div class="modal-header bg-primary">
                             <h4 class="modal-title">Update Todo</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
